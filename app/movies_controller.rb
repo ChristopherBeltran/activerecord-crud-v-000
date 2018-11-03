@@ -75,8 +75,7 @@ def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
  new = Movie.find_by(:title => "Wat?")
- new.title = "Wat, huh?"
- new
+ new.update(:title => "Wat, huh?")
 end
 
 def can_update_multiple_items_at_once
